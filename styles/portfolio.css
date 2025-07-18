@@ -110,7 +110,7 @@ main sectioin{
 }
 /* about style */
 .about{
-    border-radius: 200px;
+    border-radius: 20px;
     padding: 130px 150px;
     text-align: center;
 }
@@ -176,17 +176,49 @@ footer input[type="text"], footer input[type="email"], footer textarea{
 @media screen and (max-width: 576px) {
     .skills-container, 
     .resume-container, 
-    footer, 
+    footer,
+    .banner,
+    nav, 
+    nav > ul,
     .about-items{
         flex-direction: column;
     }
     footer, .about{
         padding: 20px;
     }
+    nav > ul{
+        gap: 30px;
+    }
+    .btn-primary{
+        margin-top: 20px;
+    }
+    .banner{
+        margin: 20px;
+    }
+    .banner-profile-pic{
+        width: 100%;
+    }
+    .header{
+        background-image: none;
+    }
     .footer-column{
         width: 100%;
     }
     footer input[type="text"], footer input[type="email"], footer textarea{
-      width: calc(100% - 40px);  
+      width: calc( 100% - 80px );  
     }
 }
+/* Tablet specific media quary*/
+@media screen and (min-width: 577px) and (max-width:992px) {
+    .banner{
+        flex-direction: column;
+    }
+    .secondary-bg{
+        padding: 50px;
+    }
+    .skills-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer input[type="text"], footer input[type="email"], footer textarea{
+      width: calc( 100% - 40px );  
